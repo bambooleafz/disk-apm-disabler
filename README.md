@@ -2,9 +2,11 @@
 
 ## introduction
 
-This tool helps you disbale the APM(Advanced Power Management) function of your HDD
+- this tool helps you disbale the APM(Advanced Power Management) function of your HDD
 
-currently only available on windows
+- you can simply add it to your starup, and relief yourself from manually disabling APM in `crystal disk info`
+
+- currently only available on windows
 
 ## usage
 
@@ -17,6 +19,6 @@ you can simply obtain the drive number from `disk management` utility provided b
 
 ## notice
 
-- this program works on ATA devices only; it might not work on sone USB drives
+- this program works on ATA devices only; it currently might not work on some USB drives
 
-- currently, most ATA devices `should` support for `disabling APM`, as long as your disk supports ATA5/6/7/8 or ACS2/3/4/5
+- nowadays, most ATA devices `should` support for `disabling APM`, as it supports ATA5/6/7/8 or ACS2/3/4/5 standards
