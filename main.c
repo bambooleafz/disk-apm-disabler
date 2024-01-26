@@ -29,15 +29,15 @@ void print_error(DWORD err) {
 
 
 void disable_apm(int phydisk_number) {
-	char phyname[64] = { 0 };
-	sprintf(phyname, "\\\\.\\PhysicalDrive%d", phydisk_number);
+    char phyname[64] = { 0 };
+    sprintf(phyname, "\\\\.\\PhysicalDrive%d", phydisk_number);
     printf("--> disabling for %s\n", phyname);
 
-	HANDLE handle = CreateFileA(phyname, GENERIC_READ | GENERIC_WRITE, FILE_SHARE_READ | FILE_SHARE_WRITE, 0, OPEN_EXISTING, 0, 0);
-	if (handle == INVALID_HANDLE_VALUE) {
-		print_error(GetLastError());
-		return;
-	}
+    HANDLE handle = CreateFileA(phyname, GENERIC_READ | GENERIC_WRITE, FILE_SHARE_READ | FILE_SHARE_WRITE, 0, OPEN_EXISTING, 0, 0);
+    if (handle == INVALID_HANDLE_VALUE) {
+        print_error(GetLastError());
+        return;
+    }
 
     ATA_PASS_THROUGH_EX aptex = { 0 };
     aptex.Length = sizeof(aptex);
