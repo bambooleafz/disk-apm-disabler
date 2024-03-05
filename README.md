@@ -1,24 +1,17 @@
-# disk-apm-disabler
-
-## introduction
-
-- this tool helps you disable the APM(Advanced Power Management) function of your HDD
-
-- you can simply add it to your startup, and relief yourself from manually disabling APM in `crystal disk info`
-
-- currently only available on windows
-
 ## usage
 
-for example, you can disable apm function of physical drive 0, 1 and 3 using this command:
+Disable physical drive 0, 1 and 3:
+
 ```
 apmdisable.exe 0 1 3
 ```
 
-you can simply obtain the drive number from `disk management` utility provided by windows
+The physical drive number can be simply obtained from `disk management` utility of Windows
 
-## notice
+## Notice
 
-- this program works on ATA devices only; it currently might not work on some USB drives
+- Currently only available on Windows
 
-- nowadays, most ATA devices `should` support for `disabling APM`, as long as it supports ATA5/6/7/8 or ACS2/3/4/5 standards
+- Currently only available on ATA devices, i.e. it might not work on some USB drives
+
+- Your disk needs to support at least ATA5, or ACS-2 standard. But don't worry about that 'cause modern HDDs always support them
